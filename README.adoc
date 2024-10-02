@@ -1,0 +1,40 @@
+= Aletheia
+:alertmanager: https://prometheus.io/docs/alerting/latest/alertmanager/[Prometheus Alertmanager].
+:karma: https://karma-dashboard.io/[Karma]
+:robusta: https://home.robusta.dev/use-case/kubernetes-monitoring-from-scratch[Robusta UI]
+
+Prometheus Alertmanager UX done right.
+
+The point of this exercise is to figure out better UX for {alertmanager} that makes sense for day to day operations.
+
+The major issues that neither {alertmanager} (nor {karma} to some extent) solve at this point are following:
+
+* [ ] Support for OAuth2/OIDC sign-in (either via identity aware proxiy or by delegating to external identity provider)
+* [ ] No alert timeline. This is really important for me. Robusta UI has a good view of the alert timeline. I want something similar
+
+== Usage
+
+=== Installation
+
+.Docker
+[source, bash]
+----
+docker pull # TODO: No official Docker image yet.
+----
+
+.Docker Compose
+[source, yaml]
+----
+services:
+  image: # TODO: No official Docker image yet.
+  environmanet:
+----
+
+
+=== Build from source
+
+
+
+=== Configuration
+
+This project attempts to 
