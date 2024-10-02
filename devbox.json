@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.10.6/.schema/devbox.schema.json",
+  "packages": [
+    "deno@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "check": [
+        "deno task check"
+      ],
+      "start": [
+        "deno task start"
+      ],
+      "update": [
+        "deno run -A -r https://fresh.deno.dev/update ."
+      ],
+      "": [
+        
+      ]
+    }
+  }
+}

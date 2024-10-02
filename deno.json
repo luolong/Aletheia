@@ -1,0 +1,29 @@
+{
+  "name": "Aletheia",
+  "version": "0.0.1",
+  "description": "A simple web app",
+  "imports": {
+    "$fresh/": "https://deno.land/x/fresh@1.6.8/",
+    "preact": "https://esm.sh/preact@10.19.6",
+    "preact/": "https://esm.sh/preact@10.19.6/",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
+    "$std/": "https://deno.land/std@0.216.0/",
+    "@oauth": "https://deno.land/x/oauth4webapi@v2.10.4/mod.ts",
+    "@oauth/": "https://deno.land/x/oauth4webapi@v2.10.4/",
+    "impl/": "./impl/"
+  },
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
+    "manifest": "deno task cli manifest $(pwd)",
+    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "build": "deno run -A dev.ts build",
+    "preview": "deno run -A main.ts",
+    "update": "deno run -A -r https://fresh.deno.dev/update ."
+  },
+  "lint": { "rules": { "tags": ["fresh", "recommended"] } },
+  "exclude": ["**/_fresh/*"],
+  "exports": [],
+  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" }
+}

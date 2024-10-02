@@ -1,0 +1,8 @@
+# Process compose for starting django
+version: "0.5"
+
+processes:
+  alertmanager:
+   command: kubectl port-forward -n observability services/kube-prometheus-stack-alertmanager 9093:9093
+   availability:
+    restart: "always"
